@@ -42,7 +42,7 @@ export default function RoomList() {
                 renderInput={(params) => <TextField {...params} />}
                 inputFormat="dd/MM/yyyy"
               />
-                 <Box sx={{ minWidth: 120 }}>
+                 <Box sx={{ minWidth: 160 }}>
                   <FormControl fullWidth>
                     <InputLabel id="simple-select-label">Período do dia</InputLabel>
                     <Select
@@ -68,8 +68,8 @@ export default function RoomList() {
               <CardMedia
                   component="img"
                   sx={{ width: 190 }}
-                  image={room.image}
-                  alt="tetes"
+                  src={room.image}
+                  alt={room.name}
                 />
                 <CardContent sx={{ flex: '1 0 auto' }}>
                   <RoomContent>
