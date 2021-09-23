@@ -4,7 +4,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import DatePicker from '@mui/lab/DatePicker';
 
 import Header from '../../../components/Header/HeraderView';
-import { TopInfos, Localizations, Filters, AvailableRooms, BottomInfos, RoomContent, Value } from './RoomListStyles';
+import { TopInfos, Localizations, Filters, AvailableRooms, BottomInfos, RoomContent, Value, FooterInfos } from './RoomListStyles';
 import { rooms } from '../../../db/rooms';
 
 export default function RoomList() {
@@ -95,6 +95,20 @@ export default function RoomList() {
             </Card>
           ))}
         </BottomInfos>
+
+        <footer>
+          <hr />
+
+          <FooterInfos>
+            <div>
+            © 2021 Clina. Todos os direitos reservados
+            </div>
+            <div>
+              <a href="/">Termos de uso</a>
+              <a href="/">Políticas de privacidade</a>
+            </div>
+          </FooterInfos>
+        </footer>
       </Container>
     </>
   );
