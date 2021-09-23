@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import * as Yup from 'yup';
 import { Button, CircularProgress } from '@mui/material';
 import { toast } from 'react-toastify';
+import { Input } from '@rocketseat/unform';
 
 import { Login } from '../../../services/api';
 import history from '../../../services/history';
 import { Container, LoginBox, FormLogin } from './LoginStyles';
 import Logo from '../../../files/images/clina-logo.svg';
-import { Input } from '@rocketseat/unform';
 
 export default function App() {
   const [loading, setLoading] = useState(false);
@@ -65,38 +65,38 @@ export default function App() {
         <h2>Bem-vindo de volta!</h2>
 
         <FormLogin onSubmit={handleSubmit} schema={schema}>
-                <h5>Endereço de e-mail</h5>
-                <Input
-                  name="email"
-                  type="email"
-                  onFocus={() => onInputFocus('email')}
-                  onBlur={() => onInputBlur('email')}
-                  placeholder="Digite seu e-mail"
-                  autoFocus
-                  spellCheck={false}
-                  onChange={(e: any) => setEmailValue(e.target.value)}
-                  className={`${emailFocus ? 'focus' : ''}`}
-                />
-                <h5 style={{ marginTop: '10px' }}>Senha</h5>
-                <Input
-                  onFocus={() => onInputFocus('password')}
-                  onBlur={() => onInputBlur('password')}
-                  name="password"
-                  type="password"
-                  onChange={(e: any) => setPasswordValue(e.target.value)}
-                  className={`${passwordFocus ? 'focus' : ''}`}
-                />
-            <Button
-              className="submitButton"
-              variant="contained"
-              color="primary"
-              type="submit"
-              disabled={!!loading}
-            >
-              {loading ? <CircularProgress color="primary" size={24} /> : 'Entrar'}
-            </Button>
-            <a href="/">Esqueci minha senha</a>
-          </FormLogin>
+          <h5>Endereço de e-mail</h5>
+          <Input
+            name="email"
+            type="email"
+            onFocus={() => onInputFocus('email')}
+            onBlur={() => onInputBlur('email')}
+            placeholder="Digite seu e-mail"
+            autoFocus
+            spellCheck={false}
+            onChange={(e: any) => setEmailValue(e.target.value)}
+            className={`${emailFocus ? 'focus' : ''}`}
+          />
+          <h5 style={{ marginTop: '10px' }}>Senha</h5>
+          <Input
+            onFocus={() => onInputFocus('password')}
+            onBlur={() => onInputBlur('password')}
+            name="password"
+            type="password"
+            onChange={(e: any) => setPasswordValue(e.target.value)}
+            className={`${passwordFocus ? 'focus' : ''}`}
+          />
+          <Button
+            className="submitButton"
+            variant="contained"
+            color="primary"
+            type="submit"
+            disabled={!!loading}
+          >
+            {loading ? <CircularProgress color="primary" size={24} /> : 'Entrar'}
+          </Button>
+          <a href="/">Esqueci minha senha</a>
+        </FormLogin>
       </LoginBox>
       <div className="sign-up">
         <span>Novo na plataforma? <a href="/">Cadastre-se</a></span>

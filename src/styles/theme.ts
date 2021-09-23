@@ -4,19 +4,13 @@ declare module '@mui/material/styles' {
   interface Theme {
     colors: {
       primary: string,
-      background: string,
-      backgroundLight: string
     };
-    borderRadius: string,
   }
   // allow configuration using `createMuiTheme`
   interface ThemeOptions {
     colors: {
       primary: string,
-      background: string,
-      backgroundLight: string
     };
-    borderRadius: string,
   }
 }
 
@@ -31,10 +25,7 @@ let theme = createTheme({
   },
   colors: {
     primary: '#7A35FF',
-    background: '#FAFAFA',
-    backgroundLight: '#FAFAFA',
   },
-  borderRadius: '10px',
 });
 
 export default theme = responsiveFontSizes(theme);
