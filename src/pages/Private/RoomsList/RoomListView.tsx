@@ -10,10 +10,10 @@ import { rooms } from '../../../db/rooms';
 export default function RoomList() {
   const [initialDate, setInitialDate] = React.useState<Date | null>(null);
   const [finalDate, setFinalDate] = React.useState<Date | null>(null);
-  const [age, setAge] = React.useState('');
+  const [period, setPeriod] = React.useState('');
 
   const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value as string);
+    setPeriod(event.target.value as string);
   };
   return (
     <>
@@ -48,8 +48,8 @@ export default function RoomList() {
                     <Select
                       labelId="simple-select-label"
                       id="simple-select"
-                      value={age}
-                      label="Age"
+                      value={period}
+                      label="Period"
                       onChange={handleChange}
                     >
                       <MenuItem value={1}>Todos</MenuItem>
